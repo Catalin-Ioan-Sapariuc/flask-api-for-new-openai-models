@@ -9,6 +9,8 @@ chat_gpt_route=Blueprint('chat_gpt_route_path',__name__)
 @chat_gpt_route.route('/message',methods=['POST','GET'])
 
 def get_ai_model_answer():
-    body = request.json
+    #body = request.json
+    json = {"question": "Hello! What is your name?"}
+    body = json
     return jsonify({ 'result':
         ChatGptService.get_ai_response(MessageRequestDTO.new_instance_from_flask_body(body))})

@@ -2,6 +2,8 @@ from flask import Flask
 import os
 import openai
 from chat_gpt.chat_gpt_controller import chat_gpt_route_path, chat_gpt_route
+from dotenv import load_dotenv
+load_dotenv() # load .env file
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
