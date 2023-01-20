@@ -3,5 +3,6 @@
 # new to ignore
 **/git_ignore/
 
-**/git-ignore
+**/git-ignore/
+/git-ignore/
 .env
