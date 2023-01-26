@@ -3,6 +3,7 @@ https://www.youtube.com/watch?v=dVLtyuffF7M&lc=Ugwv4-H526AGd8__M9x4AaABAg.9kcUBJ
 Steps:
 -- install the required packages listed in requirements.txt
 -- to run the app: 
-1. cd backend; python3 main.py 
+0. cd frontend: cp .env.example .env
+1. cd backend: python3 main.py 
 2. cd frontend: npm run start:dev
 3. open localhost:8080/prompt and enjoy . 
