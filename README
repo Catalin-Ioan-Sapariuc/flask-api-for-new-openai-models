@@ -2,4 +2,7 @@ This is an ai which follows the youtube tutorial from here:
 https://www.youtube.com/watch?v=dVLtyuffF7M&lc=Ugwv4-H526AGd8__M9x4AaABAg.9kcUBJgSgrH9kcUXJ2NRW8
 Steps:
 -- install the required packages listed in requirements.txt
--- to run the app, type: python main.py in cli  
+-- to run the app: 
+1. cd backend; python3 main.py 
+2. cd frontend: npm run start:dev
+3. open localhost:8080/prompt and enjoy . 
