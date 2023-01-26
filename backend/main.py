@@ -1,6 +1,7 @@
 from flask import Flask, json, request, jsonify, render_template, redirect, url_for
 import openai, os
 from dotenv import load_dotenv
+from flask_cors import CORS, cross_origin
 
 load_dotenv() # load .env file
 
@@ -8,20 +9,22 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
 if __name__ == '__main__':
-    #bootstrap()
     app = Flask(__name__)
 
-    @app.route('/chat-gpt-ai/', methods = ['GET', 'POST'])
+    CORS(app, support_credentials=True)
+
+    @app.route('/chat-gpt-ai', methods = ['GET', 'POST'])
     def index():
         return render_template('mainpage.html')
         #return redirect(url_for('/chat-gpt-ai/message/'))
-    @app.route('/chat-gpt-ai/message/',methods=['POST','GET'])
+
+    @app.route('/chat-gpt-ai/message',methods=['POST'])
+    @cross_origin(supports_credentials=True)
     def get_ai_model_answer():
-        prompt = request.args.get("prompt")
-        #prompt = request.json # this is the prompt from the user, this works in postman but not in the browser
-        #prompt=prompt['prompt']
-        #prompt='Who is the president of the United States?'
-        print(prompt)
+        body = request.json # this is the prompt from the user, this works in postman but not in the browser
+        
+        prompt = body['prompt']
+
         engine="davinci"
         max_tokens=50
         temperature=0.
