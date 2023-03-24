@@ -7,3 +7,7 @@
 /git-ignore/
 /git-ignore/**/*
 .env
+
+older/
+
+/data/older

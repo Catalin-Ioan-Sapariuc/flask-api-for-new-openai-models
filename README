@@ -1,4 +1,4 @@
-This is a flask APP which is a wrapper around the new GPT models. 
+This is a flask APP which is a wrapper around the new OPENAI models. 
 Here chatGPT (gpt-3.5-turbo) and gpt-3.5-turbo-0301 can be accessed through the interface. 
 The main goal of the project is to train this models on own (Blueprint) datas \
 and to access the answers for these trained models. 
