@@ -4,6 +4,5 @@
 # Then: (I installed these both with npm and pip):
 openai
 flask
-flask_cors
-python-dotenv
+tiktoken
 

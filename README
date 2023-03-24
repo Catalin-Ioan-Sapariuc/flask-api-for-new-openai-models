@@ -1,9 +1,19 @@
-This is an ai which follows the youtube tutorial from here: 
-https://www.youtube.com/watch?v=dVLtyuffF7M&lc=Ugwv4-H526AGd8__M9x4AaABAg.9kcUBJgSgrH9kcUXJ2NRW8
-Steps:
--- install the required packages listed in requirements.txt
--- to run the app: 
-0. cd frontend: cp .env.example .env
-1. cd backend: python3 main.py 
-2. cd frontend: npm run start:dev
-3. open localhost:8080/prompt and enjoy . 
+This is a flask APP which is a wrapper around the new GPT models. 
+Here chatGPT (gpt-3.5-turbo) and gpt-3.5-turbo-0301 can be accessed through the interface. 
+The main goal of the project is to train this models on own (Blueprint) datas \
+and to access the answers for these trained models. 
+For this particular flask wrapper, the answers are conveniently accessed straight trough the 
+web page. 
+
+To run the app: 
+Have installed:
+openai (+v.0.26)
+flask 
+pickle5
+tiktoken
+pandas
+numpy 
+
+After cloning, at the main directory (which contains the app.py) simply run:
+flask run. 
+Enjoy! 

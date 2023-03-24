@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index Page for question input:
+{% endblock %}
+
+{% block main %}
+    
+        <form action="/answer" method="post"> 
+            <h3 style="color: darkblue"> For each parameter, choose one option: </h3>
+            <br>
+            <select name="model">
+	            <option disabled selected>Model</option>
+	            {% for model in models %}
+	                <option value="{{ model }}">{{ model }}</option>
+	            {% endfor %}
+	        </select>
+            <select name="temperature">
+	            <option disabled selected>Temperature</option>
+	            {% for temperature in temperatures %}
+	                <option value="{{ temperature }}">{{ temperature }}</option>
+	            {% endfor %}
+	        </select>
+            <select name="token">
+	            <option disabled selected>Maximum Number of Tokens</option>
+	            {% for token in tokens %}
+	                <option value="{{ token }}">{{ token }}</option>
+	            {% endfor %}
+	        </select>
+            <br> <br> <br> 
+            <h3 style="color: darkblue"> Introduce your question about blueprint: </h3>
+            <br>
+            <input type="text" name="prompt" placeholder ="Prompt" autocomplete="off">
+            <button type="submit"> Insert your question about blueprint here </button>
+        </form>
+
+{% endblock %}
