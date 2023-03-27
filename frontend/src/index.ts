@@ -1,2 +1,0 @@
-require("./startup/index");
-export {};
